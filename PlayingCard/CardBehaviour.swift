@@ -21,14 +21,16 @@ class CardBehavior: UIDynamicBehavior {
     lazy var itemBehavior: UIDynamicItemBehavior = {
         let behavior = UIDynamicItemBehavior()
         behavior.allowsRotation = false
-//        behavior.elasticity = Constants.behaviorElasticity
-//        behavior.resistance = Constants.behaviorResistance
+        behavior.elasticity = Constants.behaviorElasticity
+        behavior.resistance = Constants.behaviorResistance
         return behavior
     }()
     
     private func push(_ item: UIDynamicItem) {
         let push = UIPushBehavior(items: [item], mode: .instantaneous)
         if let referenceBounds = dynamicAnimator?.referenceView?.bounds {
+            // Push towards the center
+            // SO that the cards don't all end up on the edge
             let center = CGPoint(x: referenceBounds.midX, y: referenceBounds.midY)
             push.angle = (CGFloat.pi/2).arc4random
             switch (item.center.x, item.center.y) {
@@ -40,7 +42,7 @@ class CardBehavior: UIDynamicBehavior {
                 push.angle = (CGFloat.pi*2).arc4random
             }
         }
-//        push.magnitude = CGFloat(Constants.behaviorPushMagnitudeMinimum) + CGFloat(Constants.behaviorPushMagnitudeRandomFactor).arc4random
+        push.magnitude = CGFloat(Constants.behaviorPushMagnitudeMinimum) + CGFloat(Constants.behaviorPushMagnitudeRandomFactor).arc4random
         push.action = { [unowned push, weak self] in
             self?.removeChildBehavior(push)
         }
