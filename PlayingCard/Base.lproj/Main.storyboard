@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,12 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="AXB-K2-OwD">
-                                <rect key="frame" x="52" y="223" width="315" height="609"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AXB-K2-OwD">
+                                <rect key="frame" x="74.402332361516073" y="173.03790087463562" width="265" height="552"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="7M3-Vs-8md">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="132"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7M3-Vs-8md">
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="132"/>
                                         <subviews>
                                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="XhO-y0-1Sg" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="83" height="132"/>
@@ -40,7 +41,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="w5I-du-D5e" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
-                                                <rect key="frame" x="116" y="0.0" width="83" height="132"/>
+                                                <rect key="frame" x="91" y="0.0" width="83" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -54,7 +55,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tHx-P5-t0I" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
-                                                <rect key="frame" x="232" y="0.0" width="83" height="132"/>
+                                                <rect key="frame" x="182" y="0.0" width="83" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -69,8 +70,8 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="6pW-U8-wgW">
-                                        <rect key="frame" x="2" y="159" width="311" height="132"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6pW-U8-wgW">
+                                        <rect key="frame" x="0.0" y="140" width="265" height="132"/>
                                         <subviews>
                                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Rng-lu-E7j" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="83" height="132"/>
@@ -87,7 +88,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Qtu-WV-iso" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
-                                                <rect key="frame" x="114" y="0.0" width="83" height="132"/>
+                                                <rect key="frame" x="91" y="0.0" width="83" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -101,7 +102,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hEz-Ec-PmO" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
-                                                <rect key="frame" x="228" y="0.0" width="83" height="132"/>
+                                                <rect key="frame" x="182" y="0.0" width="83" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -116,8 +117,8 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="b1c-jd-qLC">
-                                        <rect key="frame" x="2" y="318" width="311" height="132"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="b1c-jd-qLC">
+                                        <rect key="frame" x="0.0" y="280" width="265" height="132"/>
                                         <subviews>
                                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gSE-yf-wkP" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="83" height="132"/>
@@ -134,7 +135,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gNk-US-Xw6" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
-                                                <rect key="frame" x="114" y="0.0" width="83" height="132"/>
+                                                <rect key="frame" x="91" y="0.0" width="83" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -148,7 +149,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DoU-Af-rde" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
-                                                <rect key="frame" x="228" y="0.0" width="83" height="132"/>
+                                                <rect key="frame" x="182" y="0.0" width="83" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -163,8 +164,8 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="0ir-8t-E4P">
-                                        <rect key="frame" x="2" y="477" width="311" height="132"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0ir-8t-E4P">
+                                        <rect key="frame" x="0.0" y="420" width="265" height="132"/>
                                         <subviews>
                                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="A7i-0q-2Wd" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="83" height="132"/>
@@ -181,7 +182,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="XAz-i0-9Sa" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
-                                                <rect key="frame" x="114" y="0.0" width="83" height="132"/>
+                                                <rect key="frame" x="91" y="0.0" width="83" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -195,7 +196,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YbW-g2-f4Q" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
-                                                <rect key="frame" x="228" y="0.0" width="83" height="132"/>
+                                                <rect key="frame" x="182" y="0.0" width="83" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -217,9 +218,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outletCollection property="cardViews" destination="XhO-y0-1Sg" collectionClass="NSMutableArray" id="WZQ-I1-t6q"/>
-                        <outletCollection property="cardViews" destination="w5I-du-D5e" collectionClass="NSMutableArray" id="98Q-YM-U5U"/>
-                        <outletCollection property="cardViews" destination="tHx-P5-t0I" collectionClass="NSMutableArray" id="Qbv-Te-xa4"/>
                         <outletCollection property="cardViews" destination="Rng-lu-E7j" collectionClass="NSMutableArray" id="v0p-E8-Uht"/>
                         <outletCollection property="cardViews" destination="Qtu-WV-iso" collectionClass="NSMutableArray" id="xyz-EC-OL9"/>
                         <outletCollection property="cardViews" destination="hEz-Ec-PmO" collectionClass="NSMutableArray" id="AdW-UR-wGv"/>
@@ -229,6 +227,9 @@
                         <outletCollection property="cardViews" destination="A7i-0q-2Wd" collectionClass="NSMutableArray" id="nyb-mW-GaQ"/>
                         <outletCollection property="cardViews" destination="XAz-i0-9Sa" collectionClass="NSMutableArray" id="E8v-b9-x74"/>
                         <outletCollection property="cardViews" destination="YbW-g2-f4Q" collectionClass="NSMutableArray" id="um1-hI-YfU"/>
+                        <outletCollection property="cardViews" destination="w5I-du-D5e" collectionClass="NSMutableArray" id="98Q-YM-U5U"/>
+                        <outletCollection property="cardViews" destination="tHx-P5-t0I" collectionClass="NSMutableArray" id="Qbv-Te-xa4"/>
+                        <outletCollection property="cardViews" destination="XhO-y0-1Sg" collectionClass="NSMutableArray" id="WZQ-I1-t6q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

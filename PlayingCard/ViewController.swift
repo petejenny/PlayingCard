@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     
     private var deck = PlayingCardDeck()
     
+    lazy var animator = UIDynamicAnimator(referenceView: view)
+    
+    lazy var cardBehavior = CardBehavior(in: animator)
     
     @IBOutlet var cardViews: [PlayingCardView]!
     
@@ -60,6 +63,7 @@ class ViewController: UIViewController {
             cardView.rank = card.rank.order
             cardView.suit = card.suit.rawValue
             cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(flipCard(_:))))
+            cardBehavior.addItem(cardView)
         }
         
         //        for _ in 1...10 {
@@ -115,6 +119,9 @@ class ViewController: UIViewController {
                                                     completion: { position in
                                                         self.faceUpCardViews.forEach {
                                                             $0.isHidden = true
+                                                            // Is hidden.  But still clean up by setting alpha and transform
+                                                            $0.alpha = 1
+                                                            $0.transform = .identity
                                                         }
                                                 }
                                                 )
